@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "frozone"
+version = "0.1.0"
+description = "Talk to your thermostat"
+authors = ["Piotr Gaczkowski <doomhammerng@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+discord = "^2.1.0"
+asyncio-mqtt = "^0.16.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

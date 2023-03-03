@@ -11,7 +11,7 @@ page_username = os.getenv("USERNAME")
 page_password = os.getenv("PASSWORD")
 
 broker = os.getenv("MQTT_BROKER")
-port = int(os.getenv("MQTT_BROKER", 1883))
+port = int(os.getenv("MQTT_PORT", 1883))
 main_topic = os.getenv("MQTT_TOPIC")
 client_id = f"python-mqtt-lucius-{random.randint(0, 100)}"  # nosec
 username = os.getenv("MQTT_USERNAME", "")
@@ -84,6 +84,7 @@ def connect_mqtt() -> mqtt_client:
             logging.warning("Failed to connect, return code %d\n", rc)
 
     client = mqtt_client.Client(client_id)
+    print(username, password, broker, port)
     client.username_pw_set(username, password)
     client.on_connect = on_connect
     client.connect(broker, port)

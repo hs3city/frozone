@@ -11,7 +11,7 @@ jobs:
   build-and-push-image:
     strategy:
       matrix:
-        context: [lucius, honey]
+        context: [lucius, honey, frozone]
     runs-on: ubuntu-latest
     permissions:
       contents: read
