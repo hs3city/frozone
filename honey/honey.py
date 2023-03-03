@@ -10,7 +10,7 @@ page_username = os.getenv("USERNAME")
 page_password = os.getenv("PASSWORD")
 
 broker = os.getenv("MQTT_BROKER")
-port = int(os.getenv("MQTT_BROKER", 1883))
+port = int(os.getenv("MQTT_PORT", 1883))
 topic = os.getenv("MQTT_TOPIC")
 client_id = f"python-mqtt-honey-{random.randint(0, 100)}"  # nosec
 username = os.getenv("MQTT_USERNAME", "")
