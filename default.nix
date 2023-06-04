@@ -11,7 +11,9 @@ mkShell {
   buildInputs = [
     hadolint
     pre-commit
-    python310
+    (python310.withPackages (ps: with ps; [
+      poetry
+    ]))
   ];
   shellHook = ''
     pre-commit install
